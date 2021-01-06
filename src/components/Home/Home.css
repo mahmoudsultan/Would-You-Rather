@@ -1,0 +1,39 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabs-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 1rem;
+}
+
+.tab-header {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  transition: linear 0.1s;
+}
+
+.tabs-header .active {
+  color: #7A04DD;
+  border-bottom: 4px solid #7A04DD;
+}
+
+.tabs-header .inactive {
+  color: #6b6b6b;
+}
+
+.tabs-content {
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}

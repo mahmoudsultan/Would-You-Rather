@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { getInitialData } from '../actions/shared';
 
 import Login from './Login/Login';
-import Home from './Home';
+import Home from './Home/Home';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
