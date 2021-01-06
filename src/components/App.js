@@ -2,13 +2,13 @@ import './App.css';
 
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Container } from '@material-ui/core'
 
 import { getInitialData } from '../actions/shared';
 
-import Login from './Login';
+import Login from './Login/Login';
+import Home from './Home';
  
-const mapPropsToState = ({ authUser, users }) => ({
+const mapStateToProps = ({ authUser, users }) => ({
   authUser,
   users,
 });
@@ -23,11 +23,11 @@ function App({ dispatch, authUser, users }) {
   }
 
   return (
-    <Container>
+    <div>
       { !authUser && <Login /> }
-      { authUser && <h1>Hello</h1> }
-    </Container>
+      { authUser && <Home /> }
+    </div>
   );
 }
 
-export default connect(mapPropsToState)(App);
+export default connect(mapStateToProps)(App);
