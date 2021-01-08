@@ -15,6 +15,7 @@ import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
 import NewQuestion from './NewQuestion/NewQuestion';
 import DetailedQuestionCard from './DetailedQuestionCard/DetailedQuestionCard';
+import Leaderboard from './Leaderboard/Leaderboard';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
@@ -30,26 +31,21 @@ function App({ dispatch, authUser, users }) {
     return <h1>Loading</h1>;
   }
 
-  if (!authUser) {
-    return <Login />;
-  }
-
   return (
     <Router>
       <Navbar />
 
-      <Switch>
+      { !authUser && <Login /> }
+      { authUser && <Switch>
         <Route path='/questions/:id' component={DetailedQuestionCard} />
-        <Route path='/leaderboard'>
-          <h1>Hello Leaderboard</h1>
-        </Route>
+        <Route path='/leaderboard' component={Leaderboard} />
         <Route path='/new'>
           <NewQuestion />
         </Route>
         <Route path='/' exact>
           <Home />
         </Route>
-      </Switch>
+      </Switch> }
     </Router>
   );
 }
