@@ -13,10 +13,11 @@ const addQuestion = (question) => ({
   question,
 });
 
-export const handleNewQuestion = (question) => (dispatch, getState) => {
+export const handleNewQuestion = ({ optionOneText, optionTwoText }) => (dispatch, getState) => {
+  console.log(optionOneText, optionTwoText);
   const { authUser } = getState();
 
-  return addNewQuestion({...question, author: authUser }).then((createdQuestion) => {
+  return addNewQuestion({ optionOneText, optionTwoText, author: authUser }).then((createdQuestion) => {
     dispatch(addQuestion(createdQuestion));
   }).catch((e) => {
     // TODO: Alert user with error

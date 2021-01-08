@@ -13,6 +13,7 @@ import { getInitialData } from '../actions/shared';
 import Login from './Login/Login';
 import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
+import NewQuestion from './NewQuestion/NewQuestion';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
@@ -41,7 +42,7 @@ function App({ dispatch, authUser, users }) {
           <h1>Hello Leaderboard</h1>
         </Route>
         <Route path='/new'>
-          <h1>Hello New</h1>
+          <NewQuestion />
         </Route>
         <Route path='/' exact>
           <Home />
