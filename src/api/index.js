@@ -1,4 +1,4 @@
-import { _getUsers, _getQuestions } from './_DATA'
+import { _getUsers, _getQuestions, _saveQuestion } from './_DATA'
 
 export const getInitialData = async () => {
   const users = await _getUsers();
@@ -9,3 +9,9 @@ export const getInitialData = async () => {
     questions,
   };
 };
+
+export const addNewQuestion = async (question) => {
+  const createdQuestion = await _saveQuestion(question);
+
+  return createdQuestion;
+}
