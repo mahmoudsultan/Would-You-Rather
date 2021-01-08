@@ -48,7 +48,7 @@ const DetailedQuestionCard = ({ question, author, choosedAnswer, saveAnswer }) =
 
   const optionTwoPer = useMemo(() => {
     return ((optionTwoVotes / totalVotes) * 100).toFixed(1);
-  }, [optionTwoVotes, totalVotes]);  
+  }, [optionTwoVotes, totalVotes]);
 
   return (
     <div className="mt-8 w-4/5 lg:w-1/2 p-5 bg-white rounded-xl shadow-md overflow-hidden mx-auto">

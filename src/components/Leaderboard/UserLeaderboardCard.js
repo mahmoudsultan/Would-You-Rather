@@ -32,7 +32,7 @@ const UserLeaderboardCard = ({ user, rank }) => {
     <div className={`${cardClassNamesBasedOnRank(rank)} p-5 bg-white rounded-xl shadow-md overflow-hidden mx-auto relative`}>
       <div className="flex flex-col md:flex-row">
         <div className="flex-initial w-full md:w-36 mr-5 justify-center">
-          <img className="h-24 rounded-full mx-auto bg-gray-200" src={user.avatarURL} alt="Author Profile Picture" />
+          <img className="h-24 rounded-full mx-auto bg-gray-200" src={user.avatarURL} alt="Author Profile" />
         </div>
         <div className="flex-auto">
           <h3 className="font-semibold lg:text-4xl text-2xl text-gray-800">{ user.name }</h3>

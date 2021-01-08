@@ -14,8 +14,8 @@ import Login from './Login/Login';
 import Home from './Home/Home';
 import Navbar from './Navbar/Navbar';
 import NewQuestion from './NewQuestion/NewQuestion';
-import DetailedQuestionCard from './DetailedQuestionCard/DetailedQuestionCard';
 import Leaderboard from './Leaderboard/Leaderboard';
+import QuestionPage from './QuestionPage/QuestionPage';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
@@ -37,7 +37,7 @@ function App({ dispatch, authUser, users }) {
 
       { !authUser && <Login /> }
       { authUser && <Switch>
-        <Route path='/questions/:id' component={DetailedQuestionCard} />
+        <Route path='/questions/:id' component={QuestionPage} />
         <Route path='/leaderboard' component={Leaderboard} />
         <Route path='/add'>
           <NewQuestion />

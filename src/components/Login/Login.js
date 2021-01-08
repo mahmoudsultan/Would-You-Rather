@@ -20,7 +20,7 @@ const Login = ({ users, setAuthUser }) => {
     const selectedUserId = selectRef.current.value;
 
     setAuthUser(selectedUserId);
-  }, [selectRef])
+  }, [setAuthUser, selectRef])
 
   return (
     <div className="flex justify-center items-center h-screen">
