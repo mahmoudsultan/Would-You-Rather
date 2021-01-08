@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './Home.css';
 
-import QuestionInfo from '../QuestionInfo/QuestionInfo';
+import HomeQuestionCard from '../HomeQuestionCard/HomeQuestionCard';
 
 const mapStateToProps = ({ users, questions, authUser }) => {
   const answeredQuestions = Object.keys(users[authUser].answers)
@@ -23,7 +23,7 @@ const Home = ({ answeredQuestions, unansweredQuestions }) => {
   const [tab, setTab] = useState(0);
 
   return (
-    <div className="w-screen min-h-screen">
+    <div className="w-auto min-h-screen">
       <div className="flex justify-center flex-row">
         <div
           className={`w-64 p-5 text-xl font-medium text-gray-600 cursor-pointer tracking-wide leading-relaxed ${tab === 0 ? 'text-purple-700 font-semibold' : '' }`}
@@ -41,12 +41,12 @@ const Home = ({ answeredQuestions, unansweredQuestions }) => {
       <div className="mt-5">
         <div className={`tab ${tab === 0 ? '' : 'hidden'}`}>
           <ul className="questions-list">
-            { unansweredQuestions.map((questionId) => <li key={questionId}><QuestionInfo id={questionId} /></li>) }
+            { unansweredQuestions.map((questionId) => <li key={questionId}><HomeQuestionCard id={questionId} /></li>) }
           </ul>
         </div>
         <div className={`tab ${tab === 1 ? '' : 'hidden'}`}>
           <ul>
-            { answeredQuestions.map((questionId) => <li key={questionId}><QuestionInfo id={questionId} /></li>) }
+            { answeredQuestions.map((questionId) => <li key={questionId}><HomeQuestionCard id={questionId} /></li>) }
           </ul>
         </div>
       </div>

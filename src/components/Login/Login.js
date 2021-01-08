@@ -34,7 +34,7 @@ const Login = ({ users, setAuthUser }) => {
         </div>
         <div className="mt-2 flex mb-2 mr-2 justify-end">
           <button 
-            className="w-32 uppercase text-md text-white rounded-md bg-purple-700 p-5 font-bold"
+            className="w-32 uppercase text-md text-white rounded-md bg-purple-700 px-6 py-2 font-bold"
             onClick={handleLogin}
           >
             Login
