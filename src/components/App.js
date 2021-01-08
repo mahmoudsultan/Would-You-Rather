@@ -32,7 +32,7 @@ function App({ dispatch, authUser, users }) {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
 
       { !authUser && <Login /> }
