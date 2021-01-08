@@ -16,7 +16,7 @@ const Navbar = ({ user, logout }) => {
       <div className="md:max-w-screen-md items-center lg:max-w-screen-lg flex flex-row justify-center mx-auto">
         <div className="flex-none">
           <Link to="/">Home</Link>
-          <Link to="/new" className="ml-5">New Question</Link>
+          <Link to="/add" className="ml-5">New Question</Link>
           <Link to="/leaderboard" className="ml-5">Leaderboard</Link>
         </div>
         <div className="flex-grow"></div>
