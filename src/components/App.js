@@ -7,6 +7,7 @@ import { getInitialData } from '../actions/shared';
 
 import Login from './Login/Login';
 import Home from './Home/Home';
+import Navbar from './Navbar/Navbar';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
@@ -22,12 +23,16 @@ function App({ dispatch, authUser, users }) {
     return <h1>Loading</h1>;
   }
 
+  if (!authUser) {
+    return <Login />;
+  }
+
   return (
-    <div>
-      { !authUser && <Login /> }
-      { authUser && <Home /> }
-    </div>
-  );
+    <>
+      <Navbar />
+      <Home />
+    </>
+  )
 }
 
 export default connect(mapStateToProps)(App);
