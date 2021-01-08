@@ -39,7 +39,7 @@ function App({ dispatch, authUser, users }) {
       { authUser && <Switch>
         <Route path='/questions/:id' component={DetailedQuestionCard} />
         <Route path='/leaderboard' component={Leaderboard} />
-        <Route path='/new'>
+        <Route path='/add'>
           <NewQuestion />
         </Route>
         <Route path='/' exact>
