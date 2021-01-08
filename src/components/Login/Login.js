@@ -23,16 +23,22 @@ const Login = ({ users, setAuthUser }) => {
   }, [selectRef])
 
   return (
-    <div className="login-container">
-      <div className="card light center elevation-1">
-        <h2 className="card-header">Select User</h2>
-        <div className="card-content">
-          <select name="users" ref={selectRef}>
-            { Object.keys(users).map((userId) => <option key={userId} value={userId}>{users[userId].name}</option>) }
+    <div className="flex justify-center items-center h-screen">
+      <div className="max-w-md w-1/2 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div className="p-8">
+          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Login</div>
+          <p className="block mt-1 text-lg leading-tight font-medium text-black">Select Your User</p>
+          <select className="mt-5 p-2 text-lg w-full bg-gray-200 text-black font-semibold" name="users" ref={selectRef}>
+            { Object.keys(users).map((userId) => <option className="p-0 m-0" key={userId} value={userId}>{users[userId].name}</option>) }
           </select>
         </div>
-        <div className="card-actions">
-          <div className="button primary block elevation-2" onClick={handleLogin}>Login</div>
+        <div className="mt-2 flex mb-2 mr-2 justify-end">
+          <button 
+            className="w-32 uppercase text-md text-white rounded-md bg-purple-700 p-5 font-bold"
+            onClick={handleLogin}
+          >
+            Login
+          </button>
         </div>
       </div>
     </div>

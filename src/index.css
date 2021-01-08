@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,6 +53,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(224,231,255);
+  background: linear-gradient(90deg, rgba(224,231,255,1) 0%, rgba(238,242,255,1) 100%);
 }
 
 code {
@@ -147,16 +153,4 @@ li {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-}
-
-select {
-  background-color: transparent;
-  border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
 }
