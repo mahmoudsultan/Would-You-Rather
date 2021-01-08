@@ -22,8 +22,8 @@ const mapStateToProps = ({ questions, users, authUser }, { match }) => {
 }
 
 const DetailedQuestionCard = ({ question, author, choosedAnswer, saveAnswer }) => {
-  const optionOneTruncText = question.optionOne.text.length > 15 ? question.optionOne.text : (question.optionOne.text.slice(0, 15) + '...');
-  const optionTwoTruncText = question.optionTwo.text.length > 15 ? question.optionTwo.text : (question.optionTwo.text.slice(0, 15) + '...');
+  const optionOneTruncText = question.optionOne.text.length > 10 ? question.optionOne.text : (question.optionOne.text.slice(0, 10) + '...');
+  const optionTwoTruncText = question.optionTwo.text.length > 10 ? question.optionTwo.text : (question.optionTwo.text.slice(0, 10) + '...');
 
   const handleSaveAnswer = useCallback((e) => {
     const answer = e.target.getAttribute('data-option');

@@ -40,11 +40,13 @@ const Home = ({ answeredQuestions, unansweredQuestions }) => {
       </div>
       <div className="mt-2">
         <div className={`tab ${tab === 0 ? '' : 'hidden'}`}>
+          { !unansweredQuestions.length && <p className="text-4xl text-gray-300 font-bold text-center mt-10 capitalize">No Unanswered questions</p> }
           <ul className="questions-list">
             { unansweredQuestions.map((questionId) => <li key={questionId}><HomeQuestionCard id={questionId} /></li>) }
           </ul>
         </div>
         <div className={`tab ${tab === 1 ? '' : 'hidden'}`}>
+        { !answeredQuestions.length && <p className="text-4xl text-gray-300 font-bold text-center mt-10 capitalize">No Answered questions</p> }
           <ul>
             { answeredQuestions.map((questionId) => <li key={questionId}><HomeQuestionCard id={questionId} /></li>) }
           </ul>
