@@ -2,6 +2,11 @@ import './App.css';
 
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 import { getInitialData } from '../actions/shared';
 
@@ -28,10 +33,21 @@ function App({ dispatch, authUser, users }) {
   }
 
   return (
-    <>
+    <Router>
       <Navbar />
-      <Home />
-    </>
+
+      <Switch>
+        <Route path='/leaderboard'>
+          <h1>Hello Leaderboard</h1>
+        </Route>
+        <Route path='/new'>
+          <h1>Hello New</h1>
+        </Route>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
