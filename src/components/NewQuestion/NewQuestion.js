@@ -36,7 +36,7 @@ const NewQuestion = ({ addQuestion }) => {
   const disabled = !optionTwo || !optionOne;
 
   return (
-    <div className="w-11/12 mt-8 sm:mt-0 sm:w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-xl md:mx-auto">
+    <div className="w-11/12 mt-8 sm:w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-xl md:mx-auto">
       <h1 className="block w-full mb-4 text-center text-grey-darkest mb-6 text-purple-600 text-3xl capitalize">Would you rather?</h1>
       <form className="mb-4 md:flex md:flex-wrap md:justify-between">
         <div className="flex flex-col mb-4 md:w-1/2">
