@@ -8,7 +8,7 @@ const QuestionInfo = ({ question, author }) => {
       </div>
       <div className="flex-auto">
         <p className="font-semibold text-md text-purple-600 mt-5 uppercase">Would you rather</p>
-        <p className="font-medium text-2xl subpixel-antialiased text-gray-600 mt-5 capitalize">{ question.optionOne.text } or { question.optionTwo.text }</p>
+        <p className="font-medium text-xl sm:text-2xl subpixel-antialiased text-gray-600 mt-5 capitalize">{ question.optionOne.text } or { question.optionTwo.text }</p>
       </div>
     </div>
   );

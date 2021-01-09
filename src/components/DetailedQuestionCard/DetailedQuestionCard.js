@@ -51,14 +51,14 @@ const DetailedQuestionCard = ({ question, author, choosedAnswer, saveAnswer }) =
   }, [optionTwoVotes, totalVotes]);
 
   return (
-    <div className="mt-8 w-4/5 lg:w-1/2 p-5 bg-white rounded-xl shadow-md overflow-hidden mx-auto">
+    <div className="mt-8 w-11/12 sm:w-4/5 lg:w-1/2 p-5 bg-white rounded-xl shadow-md overflow-hidden mx-auto">
       <QuestionInfo question={question} author={author} />
-      { !choosedAnswer && <div className="mt-2 w-4/5 mx-auto flex flex-row">
+      { !choosedAnswer && <div className="mt-5 sm:mt-2 w-full sm:w-4/5 mx-auto flex flex-col sm:flex-row">
           <div onClick={handleSaveAnswer} data-option="optionOne" className="flex-none bg-gray-100 rounded-md py-2 px-5 cursor-pointer hover:bg-purple-600 hover:text-white hover:font-bold">{ optionOneTruncText }</div>
-          <div className="flex-grow text-center py-2 text-gray-600 font-bold">OR</div>
+          <div className="mt-2 mb-2 sm:mt-0 sm:mb-0 flex-grow text-center py-2 text-gray-600 font-bold">OR</div>
           <div onClick={handleSaveAnswer} data-option="optionTwo" className="flex-none bg-gray-100 rounded-md py-2 px-5 cursor-pointer hover:bg-purple-600 hover:text-white hover:font-bold">{ optionTwoTruncText }</div>
         </div> }
-      { choosedAnswer && <div className="mt-2 w-4/5 mx-auto flex flex-col">
+      { choosedAnswer && <div className="mt-5 sm:mt-2 w-full sm:w-4/5 mx-auto flex flex-col">
           <div className="relative pt-1 w-full">
             <div className="overflow-hidden h-auto mb-4 text-md flex rounded bg-pink-200">
               <div 
