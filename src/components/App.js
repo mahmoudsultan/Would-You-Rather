@@ -16,6 +16,7 @@ import Navbar from './Navbar/Navbar';
 import NewQuestion from './NewQuestion/NewQuestion';
 import Leaderboard from './Leaderboard/Leaderboard';
 import QuestionPage from './QuestionPage/QuestionPage';
+import LoadingBar from './LoadingBar/LoadingBar';
  
 const mapStateToProps = ({ authUser, users }) => ({
   authUser,
@@ -28,7 +29,7 @@ function App({ dispatch, authUser, users }) {
   }, [dispatch]);
 
   if (!Object.keys(users).length) {
-    return <h1>Loading</h1>;
+    return <LoadingBar />;
   }
 
   return (
