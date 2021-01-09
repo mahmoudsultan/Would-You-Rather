@@ -18,7 +18,7 @@ const mapStateToProps = ({ users }) => {
 const Leaderboard = ({ users }) => {
   return (
     <div className="w-auto min-h-screen mt-8 mb-8">
-      <h1 className="text-center text-5xl font-light text-purple-600">👑 Leaderboard 👑</h1>
+      <h1 className="text-center text-3xl sm:text-5xl font-light text-purple-600">👑 Leaderboard 👑</h1>
       <div className="mt-5">
         <ul>
           { users.map((user, index) => <li key={user.id}>

@@ -1,13 +1,13 @@
 const cardClassNamesBasedOnRank = (rank) => {
-  let cardWidthClass = 'w-2/5 lg:w-1/3';
+  let cardWidthClass = 'w-11/12 sm:w-2/5 lg:w-1/3';
   if (rank === 1) {
-    cardWidthClass = 'w-4/5 lg:w-3/5';
+    cardWidthClass = 'w-11/12 sm:w-4/5 lg:w-3/5';
   } else if (rank === 2) {
-    cardWidthClass = 'w-3/5 lg:w-2/4';
+    cardWidthClass = 'w-11/12 sm:w-3/5 lg:w-2/4';
   } else if (rank === 3) {
-    cardWidthClass = 'w-2/4 lg:w-2/5';
+    cardWidthClass = 'w-11/12 sm:w-2/4 lg:w-2/5';
   } else if (rank === 4) {
-    cardWidthClass = 'w-2/5 lg:w-1/3 mt-8';
+    cardWidthClass = 'w-11/12 sm:w-2/5 lg:w-1/3 mt-8';
   }
 
   return cardWidthClass;
@@ -34,7 +34,7 @@ const UserLeaderboardCard = ({ user, rank }) => {
         <div className="flex-initial w-full md:w-36 mr-5 justify-center">
           <img className="h-24 rounded-full mx-auto bg-gray-200" src={user.avatarURL} alt="Author Profile" />
         </div>
-        <div className="flex-auto">
+        <div className="mt-5 sm:mt-0 flex-auto">
           <h3 className="font-semibold lg:text-4xl text-2xl text-gray-800">{ user.name }</h3>
           <p className="lg:text-lg text-md text-gray-600 mt-4 capitalize">Number of questions: { user.numOfQuestions }</p>
           <p className="lg:text-lg text-md text-gray-600 mt-2 capitalize">Number of Answers: { user.numOfAnswers }</p>
