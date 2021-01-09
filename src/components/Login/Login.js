@@ -24,7 +24,7 @@ const Login = ({ users, setAuthUser }) => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="max-w-md w-1/2 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div className="sm:max-w-md w-4/5 sm:w-1/2 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="p-8">
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Login</div>
           <p className="block mt-1 text-lg leading-tight font-medium text-black">Select Your User</p>
